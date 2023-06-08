@@ -19,7 +19,7 @@ function Main() {
       setMessage("O nome da cidade não pode ser vazio!");
     } else {
       setLoading(true);
-      const info = await fetchData(city);
+      const info = await fetchData(city.trim());
       if (info.status) {
         setCod(200);
         setData(info.data);
@@ -104,15 +104,15 @@ function Main() {
           <div className="d-flex justify-content-between">
             <div className=" d-flex flex-column">
               <div>
-                <i className="me-3 icon fs-4 bi bi-wind"></i>
+                <i className="me-3 icon fs-5 bi bi-wind"></i>
                 <span>{data.wind.speed} m/s</span>
               </div>
               <div className="">
-                <i className="me-3 icon fs-4 bi bi-droplet-fill"></i>
+                <i className="me-3 icon fs-5 bi bi-droplet-fill"></i>
                 <span>{data.main.humidity}%</span>
               </div>
               <div>
-                <i className="me-3 icon fs-4 bi bi-compass-fill"></i>
+                <i className="me-3 icon fs-5 bi bi-compass-fill"></i>
                 <span>{data.main.pressure} hPa</span>
               </div>
             </div>
