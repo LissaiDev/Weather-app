@@ -40,11 +40,15 @@ npm run dev
 ## Dependências
 
 O Weather App tem as seguintes dependências:
-
-    React (versão X.X.X)
-    Vite (versão X.X.X)
+```
+   "framer-motion": "^10.12.16",
+    "lottie-react": "^2.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.63.2",
+    "scss": "^0.2.4"
     Outras dependências específicas podem ser encontradas no arquivo package.json.
-
+```
 Certifique-se de ter essas dependências instaladas antes de executar o aplicativo.
 
 ## Contribuição
