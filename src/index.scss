@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.borda{
+  border: 1px solid red
+}
+.name{
+  cursor: pointer;
+  color: white;
+  letter-spacing: 0.1em;
+  text-transform: none;
+  &:hover{
+    color: #c0c0c0;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    transition: all 0.5s;
+  }
+}
+label{
+  text-align: left !important;
+}
+.icon{
+  color: #c0c0c0;
+}
+.description::first-letter{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #c0c0c0;
+  font-size: 2rem;
+}
+.info{
+  background: linear-gradient(30deg, #030303, #0e0e0e)!important;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+input {
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  padding: 10px;
+  &::placeholder {
+      color: #87878b;
+  }
+}
+.botao{
+  width: 140px;
+  height: 70px;
+  border: 1px solid whitesmoke;
+  background-color: white;
+  margin: 15px auto;
+  color: black;
+}
