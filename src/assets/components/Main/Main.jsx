@@ -20,17 +20,16 @@ function Main() {
     } else {
       setLoading(true);
       const info = await fetchData(city);
-      if(info.status){
+      if (info.status) {
         setCod(200);
         setData(info.data);
         setLoading(false);
         setActive(!active);
-      }else{
+      } else {
         setCod(404);
         setLoading(false);
         setActive(!active);
       }
-     
     }
   };
   return (
@@ -79,7 +78,7 @@ function Main() {
             </form>
           </motion.div>
         </AnimatePresence>
-      ) : cod===200 ? (
+      ) : cod === 200 ? (
         <motion.div
           initial={{ opacity: 0, y: 200 }}
           transition={{ duration: 0.8, type: "spring", delay: 0.8 }}
@@ -88,7 +87,9 @@ function Main() {
           className="col-11 col-md-8 p-5 rounded-4 info"
         >
           <div className="d-flex fw-bold justify-content-between mb-4">
-            <span onClick={()=>setActive(!active) } className="name">{data.name}</span>
+            <span onClick={() => setActive(!active)} className="name">
+              {data.name}
+            </span>
             <span>{new Date().toLocaleTimeString()}</span>
           </div>
           <div className="d-flex flex-column align-items-center mb-4">
@@ -120,22 +121,21 @@ function Main() {
             </div>
           </div>
         </motion.div>
-      ) : <motion.div
-      initial={{ opacity: 0, y: 200 }}
-      transition={{ duration: 0.8, type: "spring", delay: 0.8 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0 }}
-      className="col-11 col-md-8 p-5 rounded-4 info"
-    >
-      <div className="p-5">
-        <h1 className="display-2 text-center">
-          404
-        </h1>
-        <p className="lead text-center">
-          Cidade não encontrada
-        </p>
-      </div>
-    </motion.div>}
+      ) : (
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          transition={{ duration: 0.8, type: "spring", delay: 0.8 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0 }}
+          className="col-11 col-md-8 p-5 rounded-4 info"
+          onClick={() => setActive(!active)}
+        >
+          <div className="p-5">
+            <h1 className="display-2 text-center">404</h1>
+            <p className="lead text-center">Cidade não encontrada</p>
+          </div>
+        </motion.div>
+      )}
     </>
   );
 }

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
 }
 .borda{
   border: 1px solid red
@@ -18,9 +19,7 @@
     transition: all 0.5s;
   }
 }
-label{
-  text-align: left !important;
-}
+
 .icon{
   color: #c0c0c0;
 }
@@ -38,6 +37,9 @@ label{
   height: 100vh;
   background-color: black;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 input {
   color: white;
