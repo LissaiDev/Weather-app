@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <div id="root">
-        <div className="row justify-content-center align-items-center">
+        <div id="app" className="row justify-content-center align-items-center">
           <Main />
         </div>
       </div>

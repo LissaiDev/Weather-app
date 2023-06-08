@@ -38,8 +38,12 @@
   background-color: black;
   color: white;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+#app {
+  width: 100%;
+  flex-grow: 1;
 }
 input {
   color: white;
