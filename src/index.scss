@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
+  overflow: hidden;
 }
 .borda{
   border: 1px solid red
@@ -33,8 +34,8 @@
   background: linear-gradient(30deg, #030303, #0e0e0e)!important;
 }
 #root {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: black;
   color: white;
   display: flex;
