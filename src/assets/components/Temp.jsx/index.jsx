@@ -5,6 +5,7 @@ function Temp({ setActive, active, data }) {
   return (
     <AnimatePresence>
       <motion.div
+        onClick={() => setActive(!active)}
         variants={variants}
         initial="initial"
         animate="animate"
@@ -12,9 +13,7 @@ function Temp({ setActive, active, data }) {
         className="col-11 col-md-9 p-5 rounded-4 info"
       >
         <div className="d-flex fw-bold justify-content-between mb-4">
-          <span onClick={() => setActive(!active)} className="name">
-            {data.name}
-          </span>
+          <span className="name">{data.name}</span>
           <span>{data.sys.country}</span>
         </div>
         <div className="d-flex flex-column align-items-center mb-4">
